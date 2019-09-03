@@ -1,4 +1,4 @@
-FROM centos:latest as starter
+FROM centos:latest
 
 WORKDIR '/app'
 
@@ -10,7 +10,9 @@ RUN curl -fsSL 'https://blog.forsre.com/java/jdk-8u221-linux-x64.tar.gz' | tar x
 
 #RUN yum localinstall jdk-8u221-linux-x64.rpm -y
 
-ENV JAVA_HOME /usr/java/jdk1.8.0_221-amd64
+ENV JAVA_HOME /usr/java/jdk1.8.0_221-amd64/jdk1.8.0_221/bin
+
+ENV PATH ${PATH}:/usr/java/jdk1.8.0_221-amd64/jdk1.8.0_221/bin
 
 RUN javac -version
 
