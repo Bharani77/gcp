@@ -26,7 +26,7 @@ COPY src ./src/
 COPY ./pom.xml ./
 COPY target ./target/
 
-ENTRYPOINT ["sh", "-c", "java  -Dspring.datasource.url=**${POSTGRES_DB}** -Dspring.datasource.username=**{POSTGRES_USER}** -Dspring.datasource.password=**{POSTGRES_PASSWORD}** -jar ./target/springbootvalidation-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["sh", "-c", "java -jar ./target/springbootvalidation-0.0.1-SNAPSHOT.jar"]
 
 EXPOSE 8080
  
