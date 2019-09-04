@@ -6,9 +6,15 @@
       "image": "bharanidharan/app",
       "hostname": "app",
       "essential": false,
+	  "portMappings": [
+        {
+          "hostPort": 8080,
+          "containerPort": 8080
+        }
+      ],
       "memory": 128
-    },
-    {
+    }
+    /*{
       "name": "nginx",
       "image": "bharanidharan/nginx",
       "hostname": "nginx",
@@ -19,8 +25,7 @@
           "containerPort": 80
         }
       ],
-      "links": ["app"],
       "memory": 128
-    }
+    }*/
 	]
 }
