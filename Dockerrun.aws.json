@@ -4,7 +4,7 @@
 		"name": "app",
 		"image": "bharanidharan/app:v1",
 		"hostname": "app",
-		"essential": false,
+		"essential": true,
 		"portMappings": [{
 			"hostPort": 8080,
 			"containerPort": 8080
