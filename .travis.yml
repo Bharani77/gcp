@@ -3,8 +3,8 @@ services:
   - docker
 
 script:
-  - docker build -t bharanidharan/app .
-  - docker build -t bharanidharan/nginx ./nginx
+  - docker build -t bharanidharan/app:v1 .
+  #- docker build -t bharanidharan/nginx ./nginx
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
