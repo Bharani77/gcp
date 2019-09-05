@@ -15,10 +15,10 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: us-east-1
-  app: app
-  env: App-env
+  app: app2
+  env: App2-env
   bucket_name: elasticbeanstalk-us-east-1-937041179617
-  bucket_path: app
+  bucket_path: app2
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
