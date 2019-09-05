@@ -4,21 +4,21 @@ services:
 
 script:
   - docker build -t bharanidharan/app:v1 .
-  #- docker build -t bharanidharan/nginx ./nginx
+  - docker build -t bharanidharan/nginx ./nginx
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
   - docker push bharanidharan/app:v1
-  #- docker push bharanidharan/nginx
+  - docker push bharanidharan/nginx
 
 
 deploy:
   provider: elasticbeanstalk
   region: us-east-1
-  app: app3
-  env: App3-env
+  app: app
+  env: App-env
   bucket_name: elasticbeanstalk-us-east-1-937041179617
-  bucket_path: app3
+  bucket_path: app
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY

@@ -1,0 +1,25 @@
+{
+	"AWSEBDockerrunVersion": 2,
+	"containerDefinitions": [{
+		"name": "app",
+		"image": "bharanidharan/app:v1",
+		"hostname": "app",
+		"essential": false,
+		"memory": 128
+		},
+		{
+            "name": "nginx",
+            "image": "bharanidharan/nginx",
+            "hostname": "nginx",
+            "essential": true,
+            "memory": 128,
+            "portMappings": [
+                {
+                    "hostPort": 80,
+                    "containerPort": 80
+                }
+            ],
+            "links": ["app"]
+        }
+	}]
+}
