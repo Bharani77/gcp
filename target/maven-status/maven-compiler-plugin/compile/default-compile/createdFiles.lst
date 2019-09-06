@@ -1,3 +1,6 @@
+com\onlinetutorialspoint\login\DbController.class
+com\onlinetutorialspoint\login\DbService.class
+com\onlinetutorialspoint\login\repository\DbRepository.class
 com\onlinetutorialspoint\login\Application.class
 com\onlinetutorialspoint\login\loginForm\LoginForm.class
 com\onlinetutorialspoint\login\LoginController.class

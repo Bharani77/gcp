@@ -1,4 +1,4 @@
-/*package com.onlinetutorialspoint.login;
+package com.onlinetutorialspoint.login;
 
 import java.util.List;
 
@@ -19,4 +19,4 @@ public class DbController {
 	public List<LoginForm> users() {
 		return dbService.findAll();
 	}
-}*/
+}
