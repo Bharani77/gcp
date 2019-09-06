@@ -28,7 +28,5 @@ COPY src ./src/
 COPY ./pom.xml ./
 COPY target ./target/
 
-EXPOSE 8080
-
 ENTRYPOINT ["sh", "-c", "java -jar ./target/springbootvalidation-0.0.1-SNAPSHOT.jar"]
 
