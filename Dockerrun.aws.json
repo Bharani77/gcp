@@ -5,14 +5,14 @@
 		"image": "bharanidharan/app:v2",
 		"hostname": "app",
 		"essential": false,
-		"memory": 128
+		"memory": 256
 		},
 		{
             "name": "nginx",
             "image": "bharanidharan/nginx",
             "hostname": "nginx",
             "essential": true,
-            "memory": 128,
+            "memory": 256,
             "portMappings": [
                 {
                     "hostPort": 80,
