@@ -2,7 +2,7 @@
 	"AWSEBDockerrunVersion": 2,
 	"containerDefinitions": [{
 		"name": "app",
-		"image": "bharanidharan/app:v1",
+		"image": "bharanidharan/app:v2",
 		"hostname": "app",
 		"essential": false,
 		"memory": 128
@@ -15,8 +15,8 @@
             "memory": 128,
             "portMappings": [
                 {
-                    "hostPort": 80,
-                    "containerPort": 80
+                    "hostPort": 5000,
+                    "containerPort": 5000
                 }
             ],
             "links": ["app"]
