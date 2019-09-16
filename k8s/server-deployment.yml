@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: web
+  template:
+    metadata:
+      labels:
+        component: web
+    spec:
+      containers:
+        - name: app
+          image: bharanidharan/app:v8
+          env:
+            - name: spring.datasource.url
+              value: jdbc:postgresql://postgres-cluster-ip-service:5432/postgres
+            - name: spring.datasource.username
+              value: postgres
+            - name: spring.datasource.password
+              valueFrom:
+                secretKeyRef:
+                  name: pgpassword
+                  key: PGPASSWORD
+          ports:
+            - containerPort: 8080
