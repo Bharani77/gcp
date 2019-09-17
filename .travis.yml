@@ -16,10 +16,10 @@ before_install:
   - gcloud container clusters get-credentials gcp-cluster
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
-script:
-  - docker build -t bharanidharan/app:latest -t bharanidharan/app:$SHA .
-  - docker push bharanidharan/app:latest
-  - docker push bharanidharan/app:$SHA
-  - kubectl apply -f k8s
-  - kubectl set image deployments/server-deployment server=bharanidharan/app:$SHA
+language: generic
+deploy:
+  provider: script
+  script: bash ./deploy.sh
+  on:
+    branch: master
 
