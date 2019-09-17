@@ -13,7 +13,6 @@ before_install:
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project app-k8s-253104
   - gcloud config set compute/zone asia-south1-a
-  - gcloud config set container/use_client_certificate True
   - gcloud container clusters get-credentials app-cluster
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
