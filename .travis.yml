@@ -14,7 +14,6 @@ before_install:
   - gcloud config set project app-k8s-253104
   - gcloud config set compute/zone asia-south1-a
   - gcloud container clusters get-credentials app1-cluster
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
 deploy:
   provider: script

@@ -1,3 +1,4 @@
+echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 docker build -t bharanidharan/app:latest -t bharanidharan/app:$SHA .
 docker push bharanidharan/app:latest
 docker push bharanidharan/app:$SHA
